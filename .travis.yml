@@ -1,0 +1,30 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  global:
+    - IMAGE_NAME=crisun/gitlab-ci-android
+    - IMAGE_NAME_BASE=crisun/gitlab-ci-android-base
+
+before_install:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+
+jobs:
+  include:
+    - stage: "Build Android Base"
+      script:
+        - docker build -t "${IMAGE_NAME_BASE}:latest" ./android-base > /dev/null
+        - docker push "${IMAGE_NAME_BASE}:latest"
+      name: "Android Base"
+    - stage: "Build Android Versions"
+    - script: 
+        - docker build -t "${IMAGE_NAME}:android-28" ./android-28 > /dev/null
+        - docker push "${IMAGE_NAME}:android-28"
+      name: "Android 28"
+    - script: 
+        - docker build -t "${IMAGE_NAME}:android-29" -t "${IMAGE_NAME}:latest" ./android-29 > /dev/null
+        - docker push "${IMAGE_NAME}:android-29"
+        - docker push "${IMAGE_NAME}:latest"
+      name: "Android 29"
