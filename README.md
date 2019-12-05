@@ -10,6 +10,7 @@ All images are based on openjdk:8-jdk (JDK 1.8.0_232-b09) [![Build Status](https
 
 | API level         | Command                                           | Info              |
 |-------------------|---------------------------------------------------|-------------------|
+| Android 27 (8.1)  | `docker pull crisun/gitlab-ci-android:android-27` | [Info][android27] |
 | Android 28 (9.0)  | `docker pull crisun/gitlab-ci-android:android-28` | [Info][android28] |
 | Android 29 (10.0) | `docker pull crisun/gitlab-ci-android:android-29` | [Info][android29] |
 
@@ -17,6 +18,7 @@ All images are based on openjdk:8-jdk (JDK 1.8.0_232-b09) [![Build Status](https
 
 | API level         | Base Image                                 |
 |-------------------|--------------------------------------------|
+| Android 27 (8.1)  | `FROM crisun/gitlab-ci-android:android-27` |
 | Android 28 (9.0)  | `FROM crisun/gitlab-ci-android:android-28` |
 | Android 29 (10.0) | `FROM crisun/gitlab-ci-android:android-29` |
 
@@ -24,6 +26,7 @@ All images are based on openjdk:8-jdk (JDK 1.8.0_232-b09) [![Build Status](https
 
 | API level         | Command                                                   |
 |-------------------|-----------------------------------------------------------|
+| Android 27 (8.1)  | `docker run --rm -it crisun/gitlab-ci-android:android-27` |
 | Android 28 (9.0)  | `docker run --rm -it crisun/gitlab-ci-android:android-28` |
 | Android 29 (10.0) | `docker run --rm -it crisun/gitlab-ci-android:android-29` |
 
