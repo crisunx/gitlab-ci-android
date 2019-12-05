@@ -1,6 +1,6 @@
 # GitLab CI Android
 
-All images are based on openjdk:8-jdk (JDK 1.8.0_232-b09)
+All images are based on openjdk:8-jdk (JDK 1.8.0_232-b09) [![Build Status](https://travis-ci.org/crisunx/gitlab-ci-android.svg?branch=master)](https://travis-ci.org/crisunx/gitlab-ci-android)
 
 ---
 
