@@ -22,6 +22,10 @@ jobs:
       name: "Android Base"
     - stage: "Build Android Versions"
     - script: 
+        - docker build -t "${IMAGE_NAME}:android-27" ./android-27 > /dev/null
+        - docker push "${IMAGE_NAME}:android-27"
+      name: "Android 27"
+    - script: 
         - docker build -t "${IMAGE_NAME}:android-28" ./android-28 > /dev/null
         - docker push "${IMAGE_NAME}:android-28"
       name: "Android 28"
