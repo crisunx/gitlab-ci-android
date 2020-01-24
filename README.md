@@ -32,7 +32,7 @@ All images are based on openjdk:8-jdk (JDK 1.8.0_232-b09) [![Build Status](https
 
 ## Extending from GitLab CI Android Base
 
-[Read more here](https://github.com/crisunx/gitlab-ci-android/blob/inicial/android-base)
+[Read more here](https://github.com/crisunx/gitlab-ci-android/tree/master/android-base)
 
 ## Difference between GitLab CI Android and GitLab CI Android Base
 
